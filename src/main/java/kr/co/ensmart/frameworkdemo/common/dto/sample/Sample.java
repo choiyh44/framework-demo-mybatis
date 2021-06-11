@@ -9,7 +9,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
+@ToString(callSuper=true)
 @Alias("sample")
 public class Sample extends BaseEntity {
 	private static final long serialVersionUID = 2541293207832550448L;
