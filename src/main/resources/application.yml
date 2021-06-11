@@ -36,4 +36,8 @@ spring:
       validation-timeout: 5000
       max-lifetime: 1800000
       idle-timeout: 300000
+
+logging:
+  level:
+    kr.co.ensmart.frameworkdemo.app.dao: debug
     
