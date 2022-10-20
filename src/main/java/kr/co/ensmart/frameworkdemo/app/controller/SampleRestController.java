@@ -1,6 +1,8 @@
 package kr.co.ensmart.frameworkdemo.app.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,4 +29,12 @@ public class SampleRestController {
 		return sampleService.retrieveSampleById(id);
 	}
 	
+    @GetMapping("/{id}/dynamic")
+    public Sample retrieveSampleByIdDynamic(@PathVariable Integer id) {
+        Map<String,Object> params = new HashMap<>();
+        params.put("where", "where id=#{id} ");
+        params.put("id", id);
+        return sampleService.retrieveSampleByIdDynamic(params);
+    }
+    
 }

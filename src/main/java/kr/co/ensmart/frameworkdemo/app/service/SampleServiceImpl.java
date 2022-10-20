@@ -1,6 +1,7 @@
 package kr.co.ensmart.frameworkdemo.app.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,11 @@ public class SampleServiceImpl implements SampleService {
 	public Sample retrieveSampleById(Integer id) {
 		return  sampleMapper.selectSampleById(id);
 	}
+
+    @Override
+    public Sample retrieveSampleByIdDynamic(Map<String,Object> params) {
+        return  sampleMapper.selectSampleByIdDynamic(params);
+    }
+
+
 }

@@ -37,7 +37,21 @@ spring:
       max-lifetime: 1800000
       idle-timeout: 300000
 
+  datasource2:
+    jdbc-url: jdbc:postgresql://localhost:5432/x2beedb?currentSchema=x2bee
+    driver-class-name: org.postgresql.Driver
+    username: x2bee
+    password: x2bee123!
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 5
+      connection-timeout: 30000
+      validation-timeout: 5000
+      max-lifetime: 1800000
+      idle-timeout: 300000
+
 logging:
   level:
     kr.co.ensmart.frameworkdemo.app.dao: debug
-    
+
+debug: true
